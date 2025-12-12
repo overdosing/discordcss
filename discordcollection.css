@@ -1,99 +1,5 @@
-/* Hide the help button in the toolbar */
-[href="https://support.discord.com"] { display: none; }
-
-/* Hides Store and Shop button */
-[href="/store"], 
-[href='/shop']
-{
-  display: none;
-}
-
-/* Hide Nitro Gift button */
-button[aria-label="Send a gift"] {
-  display: none;
-}
-
-/* Hide GIF picker button */
-button[aria-label="Open GIF picker"] {
-  display: none;
-}
-
-/* Hide sticker picker button */
-button[aria-label="Open sticker picker"] {
-  display: none;
-}
-
-/* Hide app launcher */
-button[aria-label="Apps"] {
-    display: none;
-}
-
-/* Hide forward button (only on hover) */
-#message-actions-forward {
-    display: none;
-}div[aria-label="Forward"] {
-    display: none;
-}
-
-/* Hide Right-click menu option "Speak Message" */
-#message-actions-tts,
-#message-tts {
-    display: none;
-}
-
-/* Add danger colors to dangerous user actions */
-#user-context-close-dm,
-#user-context-remove-friend,
-#user-context-block {
-    color: var(--status-danger);
-}
-
-#user-context-close-dm:active,
-#user-context-remove-friend:active,
-#user-context-block:active {
-    background-color: var(--red-500) !important;
-    color: var(--white-500) !important;
-}
-
-#user-context-close-dm[class*="focused-"],
-#user-context-remove-friend[class*="focused-"],
-#user-context-block[class*="focused-"] {
-    background-color: var(--button-danger-background);
-    color: var(--white-500);
-}
-
-/* Superior Platform Indicators */
-span.vc-platform-indicator > svg {
-    width: 15px !important;
-    height: 15px !important;
-    fill: var(--brand-500) !important; /* whatever color */
-    margin-left: 1px;
-    margin-right: 1px;
-}
-
-div.profileBadges-2pItdR.containerWithContent-2Yws8V.container-1gYwHN > span.vc-platform-indicator > svg {
-    width: 20px !important;
-    height: 20px !important;
-    fill: var(--brand-500) !important; /* whatever color */
-}
-
-/* Hide Activity Button in Call */
-button[aria-label="Start An Activity"] {
-  display: none;
-}
-
-/* Hide New Group DM */
-div.iconWrapper__9293f[aria-label="New Group DM"] {
-    display: none;
-}
-
-/* Remove Quick React Bar */
-.button_f7ecac.hoverBarButton_f84418:nth-of-type(1),
-.button_f7ecac.hoverBarButton_f84418:nth-of-type(2),
-.button_f7ecac.hoverBarButton_f84418:nth-of-type(3),
-.separator_f84418 {
-   display: none;
-}
+@import url('https://raw.githubusercontent.com/Krammeth/css-snippets/refs/heads/main/CompactButtons.css');
+@import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/UserActivityRedesign/import.css");
 
 /* Visual Refresh Compact */
 
@@ -237,15 +143,44 @@ div.iconWrapper__9293f[aria-label="New Group DM"] {
     }
 }
 
+/* Compact Search Field */
+.search__97492 > .searchBar__97492 {
+    width: 32px !important;
+}
 
+.search__97492 > .searchBar__97492 .DraftEditor-root {
+    padding-right: 3px !important
+}
 
+.search__97492.open__97492 > .searchBar__97492 {
+    width: 244px !important;
+}
 
+.search__97492 > .searchBar__97492 .icon__97492 {
+    margin-right: 7px;
+}
 
+/* Hide the help button in the toolbar */
+[href="https://support.discord.com"] { display: none; }
 
+/* Hide menus next to mute and deafen buttons */
+div[class^=micButtonParent__] {
+  button[role="switch"] {
+    border-radius: var(--radius-sm) !important;
+    
+    ~ button {
+      display: none;
+    }
+  }
+}
 
+/* Hide Right-click menu option "Speak Message" */
+#message-actions-tts,
+#message-tts {
+    display: none;
+}
 
-
-
-
-
-
+/* Hide New Group DM */
+div.iconWrapper__9293f[aria-label="New Group DM"] {
+    display: none;
+}
