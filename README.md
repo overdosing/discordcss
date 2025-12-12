@@ -10,4 +10,4 @@ copy / paste css into quickcss.
 pull requests are welcome. for major changes, please open an issue first to discuss what you would like to change.
 
 ## license
-[MIT License](https://choosealicense.com/licenses/mit/)
+[Unlicense license](https://choosealicense.com/licenses/unlicense/)
